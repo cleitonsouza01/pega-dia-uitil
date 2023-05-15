@@ -4,7 +4,7 @@ import datetime
 
 def dia_util(ano, mes, dia_util):
     feriados = holidays.BR() + holidays.US()
-    feriados.get('07-01-2018')
+    feriados.get('04-07-2018')
     dia = 1
     dia_semana = date(ano, mes, dia).weekday()
     contador_dia_util = 0
