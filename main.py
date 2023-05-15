@@ -1,10 +1,10 @@
 from datetime import date, timedelta
 import holidays
-
+import datetime
 
 def dia_util(ano, mes, dia_util):
-    feriados = holidays.BR(), holidays.US()
-
+    feriados = holidays.BR() + holidays.US()
+    feriados.get('07-01-2018')
     dia = 1
     dia_semana = date(ano, mes, dia).weekday()
     contador_dia_util = 0
@@ -17,7 +17,7 @@ def dia_util(ano, mes, dia_util):
         dia += 1
         dia_semana = date(ano, mes, dia).weekday()
 
-    return dia
+    return datetime.datetime(ano, mes, dia)
 
 
 if __name__ == '__main__':
