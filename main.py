@@ -12,7 +12,7 @@ def dia_util(ano, mes, dia_util):
 
     while contador_dia_util < dia_util:
         if dia_semana != 5 and dia_semana != 6 and date(ano, mes, dia) not in feriados_brasileiros:
-            if date(ano, mes, dia) not in               feriados_internacionais:
+            if date(ano, mes, dia) not in feriados_internacionais:
                 contador_dia_util += 1
         if contador_dia_util == dia_util:
             break
